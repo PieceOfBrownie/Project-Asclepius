@@ -1,4 +1,5 @@
 Project Asclepius
 
 ## Authors
-Oleksandr Kupchyk
+Oleksandr Kupchyk,
+Vadym Horshchuk
