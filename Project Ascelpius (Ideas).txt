@@ -34,5 +34,7 @@ Additional Ideas for sports idea:
 - Growing mushrooms on progress-getting new mushroom types as reaching new health/sport milestones-keeping streak? aka dualingo;
  - Personalized notifications on daily activities (drink water, touch some grass);
 - Game-like quizes/tests/exercises for learning commom ilnesses sympthoms that are usually being ignored;
+ - Workout programme;
+ - Routine plan like on justinguitar.com, with timers to follow, notes to exercises, score track, etc
 
 
