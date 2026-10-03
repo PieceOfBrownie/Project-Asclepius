@@ -37,4 +37,8 @@ Additional Ideas for sports idea:
  - Workout programme;
  - Routine plan like on justinguitar.com, with timers to follow, notes to exercises, score track, etc
 
-
+Chosen:
+- Game-like system that encourages an active lifestyle for the user;
+- Tracking health data and alerting on worrifying changes;
+- Social ranking system that let's you see goals and achievements of other users (i.e friends, family, celebreties) to compare and challenge;
+- 
