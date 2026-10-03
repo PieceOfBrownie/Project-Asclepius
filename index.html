@@ -19,22 +19,26 @@
   </div>
 
   <div id="main">
-    <button class="openbtn" onclick="openNav()">☰</button>  
+    <button class="openbtn" onclick="openNav()">☰</button>
   </div>
 
+  <main class="home">
+    <section class="stats" aria-label="Progress">
+      <div class="stat">
+        <label for="streak">Streak 🔥</label>
+        <progress id="streak" value="0" max="25"></progress>
+      </div>
+      <div class="stat">
+        <label for="xp">XP ⭐</label>
+        <progress id="xp" value="7" max="10"></progress>
+      </div>
+    </section>
 
-  <div class="stats">
-    <label for="file">Streak 🔥</label>
-    <progress id="file" value="" max="25"> 32% </progress><br>
-    <label for="file">XP ⭐</label>
-    <progress id="file" value="7" max="10"> 32% </progress>
-  </div><br>
-
-
-  <div>
-    <img src="mushroom (placeholder).png" alt="Mushroom (Placeholder)" class="mushroom">
-    <button class="start">START</button>
-  </div>
+    <section class="home-content">
+      <img src="mushroom (placeholder).png" alt="Mushroom (Placeholder)" class="mushroom">
+      <button class="start">START</button>
+    </section>
+  </main>
 
 
   <!--
