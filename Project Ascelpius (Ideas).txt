@@ -26,6 +26,13 @@ There are around 9 similar apps I have found by now, all with similar gamificati
 
 Additional Ideas for sports idea:
 - Automatic exercices adjustment during menstruation
-- 
+- Social features that let's the users connect to specialized trainers/professionals to ask for help and/or request their services;
+- Game-like system that encourages an active lifestyle for the user;
+- Tracking health data and alerting on worrifying changes;
+- Social ranking system that let's you see goals and achievements of other users (i.e friends, family, celebreties) to compare and challenge;
+- Event feed that informs the user of upcoming activities to participate;
+- Growing mushrooms on progress-getting new mushroom types as reaching new health/sport milestones-keeping streak? aka dualingo;
+ - Personalized notifications on daily activities (drink water, touch some grass);
+- Game-like quizes/tests/exercises for learning commom ilnesses sympthoms that are usually being ignored;
 
 
