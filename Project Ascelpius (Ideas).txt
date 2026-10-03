@@ -15,6 +15,17 @@ Ideas (WIP):
  - Hydration reminders/warnings;
  - Track menstruation cycle;
  - Workout programme;
+ - Routine plan like on justinguitar.com, with timers to follow, notes to exercises, score track, etc
 
 Target users:
  - Young people (16-25) looking for a coherent solution to track their health, stay active and fit, all in one app.
+
+
+Competition: 
+There are around 9 similar apps I have found by now, all with similar gamification features. To get out of this pool we should look at a diffrent direction, maybe not for "upgrading" and "leveling up" but focus on regularity, exercises to increase health, not exactly strenght, maybe more casual style, as most of my findings were RPGs and in very agressive motto aka "become strong halk" etc.
+
+Additional Ideas for sports idea:
+- Automatic exercices adjustment during menstruation
+- 
+
+
