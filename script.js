@@ -7,9 +7,7 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidepanel").style.width = "0";
 } 
-// ======================================== // 
-// WORKOUT DATA // 
-// ======================================== 
+ 
 const exercises = [ 
   { 
     name: "Jumping Jacks", duration: 10 
@@ -32,16 +30,12 @@ const exercises = [
 
 let currentExercise = 0; 
 
-// ======================================== // 
-// TIMER //
-// ======================================== 
+/* Created timer here */ 
 
 let timeLeft = exercises[currentExercise].duration;
 let timer; 
 
-// ======================================== // 
-// GET HTML ELEMENTS // 
-// ======================================== 
+/* Here get the shit from html */  
 
 const exerciseElements = document.querySelectorAll(".exercise"); 
 
@@ -57,27 +51,23 @@ const restartButton =
 const nextButtons = document.querySelectorAll(".next-button");
 const startButtons = document.querySelectorAll(".start-button");
 
-// ======================================== // 
-// SHOW CURRENT EXERCISE // 
-// ======================================== //
+/* Showing exercises (pls) */ 
 
 function showExercise() { 
-  // First, close every exercise 
+   
   exerciseElements.forEach(function(exercise) { 
     exercise.classList.remove("active"); 
   }); 
 
-  // Open the current exercise 
+   
   exerciseElements[currentExercise].classList.add("active"); 
   
-  // Set timer 
+  /* timer */  
   timeLeft = exercises[currentExercise].duration; 
   updateTimer(); 
 } 
 
-// ======================================== // 
-// UPDATE TIMER ON SCREEN // 
-// ======================================== // 
+/* Update the timet */ 
 
 function updateTimer() {
     const currentElement = exerciseElements[currentExercise];
@@ -85,13 +75,13 @@ function updateTimer() {
         currentElement.querySelector(".timer-value");
     timerElement.textContent = timeLeft;
 }
-// ======================================== // GO TO NEXT EXERCISE // ======================================== // 
+ 
 
 function nextExercise() { 
-  // Stop current timer // 
+   
   clearInterval(timer); 
   
-  // Check if this is the last exercise // 
+  /* Was it the last? */  
   if (currentExercise >= exercises.length - 1) {
     clearInterval(timer);
     exerciseElements.forEach(function(exercise) {
@@ -100,26 +90,26 @@ function nextExercise() {
     workoutFinished.style.display = "block";
     return;
 }
-  // Move to next exercise // 
+  
   currentExercise++; 
 
-  // Show next exercise // 
+   
   showExercise(); 
    
 } 
-// ======================================== // START TIMER // ======================================== // 
+/* To put timer start here */  
 function startTimer() { 
   timer = setInterval(function() { 
     timeLeft--; 
     updateTimer(); 
-    // Timer finished // 
+     
     if (timeLeft <= 0) { 
       nextExercise(); 
     } 
   }, 1000); 
 } 
 
-// ======================================== // BUTTON // ======================================== // 
+/* Buttttons yay */ 
 nextButtons.forEach(function(button) {
     button.addEventListener("click", function() {
         nextExercise();
@@ -143,5 +133,5 @@ finishButton.addEventListener("click", function() {
     alert("Thanks for working out!");
 });
 
-// ======================================== // START WORKOUT // ======================================== // 
+/* Start everything */ 
 showExercise(); 
