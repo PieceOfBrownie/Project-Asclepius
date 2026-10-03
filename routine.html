@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ShroomFit - Garden</title>
+  <title>ShroomFit - Routine</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
   <div id="mySidepanel" class="sidepanel">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="index.html">🏠 Home</a>
@@ -19,27 +19,21 @@
   </div>
 
   <div id="main">
-    <button class="openbtn" onclick="openNav()">☰</button>  
+    <button class="openbtn" onclick="openNav()">☰</button>
   </div>
 
-
   <header class="topbar">
-    <h1>Garden</h1>
+    <h1>Routine</h1>
   </header>
 
   <main>
-    <p>Your mushrooms grow as you reach milestones.</p>
-    <div class="grid">
-      <div class="card">🍄</div>
-      <div class="card locked">🔒</div>
-      <div class="card locked">🔒</div>
-      <div class="card locked">🔒</div>
-      <div class="card locked">🔒</div>
-      <div class="card locked">🔒</div>
-      <div class="card locked">🔒</div>
-      <div class="card locked">🔒</div>
-      <div class="card locked">🔒</div>
+    <p>Plan how much you want to practice today.</p>
+    <div class="list">
+      <div class="card"><span>Practice goal</span><strong>20 minutes</strong></div>
+      <div class="card"><span>Completed today</span><strong>0 minutes</strong></div>
+      <div class="card"><span>Next session</span><strong>Not scheduled</strong></div>
     </div>
+    <button class="primary">+ Add practice session</button>
   </main>
 
   <script src="script.js"></script>
