@@ -1,11 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Asclepius</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
-<h1>Project Ascelpius</h1>
-              
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel risus ac ex sodales pulvinar ac non nulla. Nulla a lorem sed metus fringilla dignissim. Donec dignissim eros dolor, eu vulputate leo pellentesque sed. Phasellus non malesuada nulla. Quisque venenatis bibendum libero in fringilla. Aliquam luctus leo eget laoreet elementum. Sed commodo ex eu diam semper, non sagittis est pellentesque. Sed vehicula dapibus fringilla. Curabitur mollis dapibus efficitur. Fusce elementum condimentum enim vitae cursus. Integer laoreet vel lacus sit amet semper. Morbi porttitor mi ac enim tincidunt, non condimentum quam volutpat. Proin efficitur fermentum ex non congue. Praesent porttitor diam viverra fermentum pulvinar.</p>
+  <!-- Top bar: app name + streak + XP -->
+  <header class="topbar">
+    <h1>Project Asclepius</h1>
+    <div class="stats">
+      <span id="streak">🔥 0</span>
+      <span id="xp">⭐ 0 XP</span>
+    </div>
+  </header>
 
+  <main>
+
+    <!-- HOME -->
+    <section id="home" class="screen active">
+      <h2>Today</h2>
+      <p>Just 5 minutes a day.</p>
+      <button id="start-btn" class="primary">▶ Start today's workout</button>
+      <div class="card">Daily goal: <span id="goal">0 / 5 min</span></div>
+    </section>
+
+    <!-- ROUTINE -->
+    <section id="routine" class="screen">
+      <h2>Routine</h2>
+      <ul class="list">
+        <li class="card">Squats <button>Start</button></li>
+        <li class="card">Planks <button>Start</button></li>
+        <li class="card">Stretches <button>Start</button></li>
+      </ul>
+      <div class="card">
+        <div id="timer">00:00</div>
+        <button id="timer-btn">Start / Stop</button>
+      </div>
+      <textarea id="notes" placeholder="Notes for this exercise..."></textarea>
+    </section>
+
+    <!-- HEALTH -->
+    <section id="health" class="screen">
+      <h2>Health</h2>
+      <div class="card">Heart rate: -- bpm</div>
+      <div class="card">Sleep: -- h</div>
+      <div class="card">Steps: --</div>
+      <div id="alerts" class="card">No alerts</div>
+    </section>
+
+    <!-- GARDEN (mushrooms) -->
+    <section id="garden" class="screen">
+      <h2>My Mushrooms</h2>
+      <div class="card">🍄 Level 1 mushroom (growing...)</div>
+      <h3>Unlocked types</h3>
+      <div class="grid">
+        <div class="card">🍄</div>
+        <div class="card locked">🔒</div>
+        <div class="card locked">🔒</div>
+      </div>
+    </section>
+
+    <!-- RANKING -->
+    <section id="ranking" class="screen">
+      <h2>Ranking</h2>
+      <ol class="list">
+        <li class="card">You — 0 XP</li>
+        <li class="card">Friend — 0 XP</li>
+        <li class="card">Family — 0 XP</li>
+      </ol>
+      <button>Challenge a friend</button>
+    </section>
+
+  </main>
+
+  <!-- Bottom navigation -->
+  <nav class="tabs">
+    <button data-target="home" class="active">🏠<span>Home</span></button>
+    <button data-target="routine">📋<span>Routine</span></button>
+    <button data-target="health">❤️<span>Health</span></button>
+    <button data-target="garden">🍄<span>Garden</span></button>
+    <button data-target="ranking">🏆<span>Ranking</span></button>
+  </nav>
+
+  <script src="script.js"></script>
 </body>
 </html>
-                                                                                                                                                                                                                            
