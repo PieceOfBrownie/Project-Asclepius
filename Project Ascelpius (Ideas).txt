@@ -1,5 +1,6 @@
 Ideas (WIP):
  - Social features that let's the users connect to specialized trainers/professionals to ask for help and/or request their services;
  - Game-like system that encourages an active lifestyle for the user;
-- Finding doctors appointments easily
+- Finding doctors appointments easily ( rejex)
+- notifications with health advices
  - tracking health data and alerting on worrifying changes
