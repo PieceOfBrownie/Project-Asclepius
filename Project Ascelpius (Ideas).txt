@@ -4,3 +4,8 @@ Ideas (WIP):
 - Finding doctors appointments easily ( rejex)
 - notifications with health advices
  - tracking health data and alerting on worrifying changes
+ - growing mushrooms on progress
+ -getting new mushroom types as reaching new health/sport milestones
+ -keeping streak? aka dualingo
+ - personalized notifications on daily activities (drink water, touch some grass)
+ - Game-like quizes/tests/exercises for learning commom ilnesses sympthoms that are usually being ignored
