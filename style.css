@@ -49,3 +49,80 @@
 .openbtn:hover {
   background-color: #444;
 }
+
+/* Basic page */ 
+body { 
+  font-family: Arial, sans-serif; 
+  background-color: #f2f2f2; 
+  margin: 0; 
+  padding: 30px; 
+} 
+
+/* Main container */ 
+.workout-container { 
+  max-width: 600px; 
+  margin: 0 auto; 
+} 
+
+/* Exercise rectangle */ 
+.exercise { 
+  background-color: white; 
+  border: 1px solid #cccccc; 
+  margin-bottom: 10px; 
+} 
+
+/* Top part of rectangle */ 
+.exercise-header { 
+  padding: 15px; 
+}
+
+.exercise-header h2 { 
+  margin: 0; 
+  font-size: 20px; 
+} 
+
+/* Content inside expanded exercise */ 
+.exercise-content { 
+  display: none; 
+  padding: 15px; 
+  border-top: 1px solid #cccccc; 
+} 
+
+/* Only the exercise with the "active" class will show its content. */ 
+.exercise.active .exercise-content { 
+  display: block; 
+} 
+
+/* Fake picture for now */ 
+.exercise-image { 
+  height: 180px; 
+  background-color: #dddddd; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  margin-bottom: 15px; 
+} 
+/* Timer */ 
+.timer { 
+  font-size: 32px; 
+  font-weight: bold; 
+  margin: 20px 0; 
+} 
+/* Button */ 
+button { 
+  padding: 12px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+}
+
+.workout-finished {
+    display: none;
+    text-align: center;
+    padding: 30px;
+    background-color: white;
+    border: 1px solid #cccccc;
+}
+
+.workout-finished button {
+    margin: 5px;
+}
