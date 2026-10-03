@@ -130,15 +130,12 @@ restartButton.addEventListener("click", function() {
 });
 
 finishButton.addEventListener("click", function() {
-    let growthStage = localStorage.getItem("mushroomStage");
+    let growthStage = Number(localStorage.getItem("mushroomStage")) || 1;
 
-    if (growthStage === null) {
-        growthStage = 1;
-    } else {
-        growthStage = Number(growthStage) + 1;
-    }
+    growthStage++;
 
     localStorage.setItem("mushroomStage", growthStage);
+
     window.location.href = "index.html";
 });
 
