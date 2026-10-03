@@ -6,3 +6,5 @@ Ideas (WIP):
  - Tracking health data and alerting on worrifying changes;
  - Social ranking system that let's you see goals and achievements of other users (i.e friends, family, celebreties) to compare and challenge;
  - Event feed that informs the user of upcoming activities to participate;
+- Doctor-visit prep for foreigners in Poland
+- Shared health log for remote caregivers
