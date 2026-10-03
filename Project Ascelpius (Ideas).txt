@@ -6,5 +6,15 @@ Ideas (WIP):
  - Tracking health data and alerting on worrifying changes;
  - Social ranking system that let's you see goals and achievements of other users (i.e friends, family, celebreties) to compare and challenge;
  - Event feed that informs the user of upcoming activities to participate;
-- Doctor-visit prep for foreigners in Poland
-- Shared health log for remote caregivers
+ - Doctor-visit prep for foreigners in Poland;
+ - Shared health log for remote caregivers;
+ - Growing mushrooms on progress-getting new mushroom types as reaching new health/sport milestones-keeping streak? aka dualingo;
+ - Personalized notifications on daily activities (drink water, touch some grass);
+ - Game-like quizes/tests/exercises for learning commom ilnesses sympthoms that are usually being ignored;
+ - Health tips everyday;
+ - Hydration reminders/warnings;
+ - Track menstruation cycle;
+ - Workout programme;
+
+Target users:
+ - Young people (16-25) looking for a coherent solution to track their health, stay active and fit, all in one app.
