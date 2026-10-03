@@ -44,6 +44,16 @@ let timer;
 // ======================================== 
 
 const exerciseElements = document.querySelectorAll(".exercise"); 
+
+const workoutFinished =
+    document.getElementById("workout-finished");
+
+const finishButton =
+    document.getElementById("finish-button");
+
+const restartButton =
+    document.getElementById("restart-button");
+
 const nextButtons = document.querySelectorAll(".next-button");
 const startButtons = document.querySelectorAll(".start-button");
 
@@ -82,10 +92,14 @@ function nextExercise() {
   clearInterval(timer); 
   
   // Check if this is the last exercise // 
-  if (currentExercise >= exercises.length - 1) { 
-    alert("Workout complete!"); 
-    return; 
-  } 
+  if (currentExercise >= exercises.length - 1) {
+    clearInterval(timer);
+    exerciseElements.forEach(function(exercise) {
+        exercise.classList.remove("active");
+    });
+    workoutFinished.style.display = "block";
+    return;
+}
   // Move to next exercise // 
   currentExercise++; 
 
@@ -116,6 +130,17 @@ startButtons.forEach(function(button) {
     button.addEventListener("click", function() {
         startTimer();
     });
+});
+
+restartButton.addEventListener("click", function() {
+    clearInterval(timer);
+    currentExercise = 0;
+    workoutFinished.style.display = "none";
+    showExercise();
+});
+
+finishButton.addEventListener("click", function() {
+    alert("Thanks for working out!");
 });
 
 // ======================================== // START WORKOUT // ======================================== // 
