@@ -130,7 +130,16 @@ restartButton.addEventListener("click", function() {
 });
 
 finishButton.addEventListener("click", function() {
-    alert("Thanks for working out!");
+    let growthStage = localStorage.getItem("mushroomStage");
+
+    if (growthStage === null) {
+        growthStage = 1;
+    } else {
+        growthStage = Number(growthStage) + 1;
+    }
+
+    localStorage.setItem("mushroomStage", growthStage);
+    window.location.href = "index.html";
 });
 
 /* Start everything */ 
