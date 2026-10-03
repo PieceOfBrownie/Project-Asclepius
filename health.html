@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Garden - Project Asclepius</title>
+  <title>Health - Project Asclepius</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <div id="mySidepanel" class="sidepanel">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="routine.html">📋 Routine</a>
@@ -19,36 +18,29 @@
   </div>
 
   <div id="main">
-    <button class="openbtn" onclick="openNav()">☰</button>  
+    <button class="openbtn" onclick="openNav()">☰</button>
   </div>
 
-
   <header class="topbar">
-    <h1>Garden</h1>
+    <h1>Health</h1>
   </header>
 
   <main>
-    <p>Your mushrooms grow as you reach milestones.</p>
-    <div class="grid">
-      <div class="card">🍄</div>
-      <div class="card locked">🔒</div>
-      <div class="card locked">🔒</div>
-      <div class="card locked">🔒</div>
-      <div class="card locked">🔒</div>
-      <div class="card locked">🔒</div>
-      <div class="card locked">🔒</div>
-      <div class="card locked">🔒</div>
-      <div class="card locked">🔒</div>
+    <p>Track how your health improves as you practice.</p>
+    <div class="list">
+      <div class="card"><span>Overall improvement</span><strong>+12%</strong></div>
+      <div class="card"><span>Focus</span><strong>Getting started</strong></div>
+      <div class="card"><span>Well-being goal</span><strong>In progress</strong></div>
     </div>
+    <button class="primary">Update health check-in</button>
   </main>
 
   <nav class="tabs">
     <a href="index.html">🏠<span>Home</span></a>
     <a href="friends.html">👥<span>Friends</span></a>
-    <a href="garden.html" class="active">🍄<span>Garden</span></a>
+    <a href="garden.html">🍄<span>Garden</span></a>
     <a href="ranking.html">🏆<span>Ranking</span></a>
   </nav>
-
   <script src="script.js"></script>
 </body>
 </html>

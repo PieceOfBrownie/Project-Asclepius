@@ -98,16 +98,17 @@ main {
 }
 
 .stats {
-    display: flex;
-    justify-content: flex-end;
-    gap: 18px;
-    margin: 0 0 28px;
+    grid-area: stats;
+    display: grid;
+    align-content: center;
+    gap: 22px;
+    margin: 0;
 }
 
 .stat {
     display: grid;
     gap: 5px;
-    min-width: 140px;
+    min-width: 0;
     color: #49634d;
     font-size: 13px;
     font-weight: 600;
@@ -120,21 +121,28 @@ progress {
 }
 
 .home-content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 170px;
+    grid-template-areas:
+      "mushroom stats"
+      "start stats";
     align-items: center;
-    gap: 24px;
+    column-gap: 38px;
     padding: 18px 0 8px;
 }
 
 .mushroom {
+    grid-area: mushroom;
     display: block;
-    width: min(68vw, 310px);
+    justify-self: center;
+    width: min(100%, 310px);
     height: auto;
     object-fit: contain;
 }
 
 .start {
+    grid-area: start;
+    justify-self: center;
     min-width: 160px;
     padding: 13px 28px;
     border: none;
@@ -229,8 +237,19 @@ progress {
 }
 
 @media (max-width: 520px) {
+    .home-content {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "mushroom"
+        "start"
+        "stats";
+      row-gap: 24px;
+    }
+
     .stats {
-      justify-content: stretch;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 4px;
     }
 
     .stat {
