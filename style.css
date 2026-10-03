@@ -74,7 +74,7 @@ a {
   background-color: #444;
 }
 
-/* Basic page */ 
+ 
 body { 
   font-family: Arial, sans-serif; 
   background-color: #f2f2f2; 
@@ -82,39 +82,44 @@ body {
   padding: 30px; 
 } 
 
-/* Main container */ 
+
 .workout-container { 
   max-width: 600px; 
   margin: 0 auto; 
+  border-radius: 8px;
 } 
 
-/* Exercise rectangle */ 
+
 .exercise { 
   background-color: white; 
-  border: 1px solid #cccccc; 
+  border: 1px solid #1f3025; 
   margin-bottom: 10px; 
+  border-radius: 8px;
 } 
 
 /* Top part of rectangle */ 
 .exercise-header { 
   padding: 15px; 
+  border-radius: 8px;
 }
 
 .exercise-header h2 { 
   margin: 0; 
   font-size: 20px; 
+  border-radius: 8px;
 } 
 
-/* Content inside expanded exercise */ 
+/* thinhy inside expanded exercise */ 
 .exercise-content { 
   display: none; 
   padding: 15px; 
-  border-top: 1px solid #cccccc; 
+  border-top: 1px solid #1f3025; 
+  border-radius: 8px;
 } 
 
-/* Only the exercise with the "active" class will show its content. */ 
 .exercise.active .exercise-content { 
   display: block; 
+  border-radius: 8px;
 } 
 
 /* Fake picture for now */ 
@@ -125,8 +130,9 @@ body {
   align-items: center; 
   justify-content: center; 
   margin-bottom: 15px; 
+  border-radius: 8px;
 } 
-/* Timer */ 
+
 .timer { 
   font-size: 32px; 
   font-weight: bold; 
@@ -137,6 +143,7 @@ button {
   padding: 12px 20px; 
   font-size: 16px; 
   cursor: pointer; 
+  border-radius: 8px;
 }
 
 .workout-finished {
@@ -144,12 +151,20 @@ button {
     text-align: center;
     padding: 30px;
     background-color: white;
-    border: 1px solid #cccccc;
+    border: 1px solid #1f3025;
+    border-radius: 8px;
 }
 
 .workout-finished button {
     margin: 5px;
-    background-color: #304a38;
+    background-color: #c7cfc9;
+    border-radius: 8px;
+}
+
+h1 {
+    
+    color: #1f3025;
+    margin: 5px;
 }
 
 .topbar,
