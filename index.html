@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="home-page">
   <div id="mySidepanel" class="sidepanel">
     <button type="button" class="closebtn" onclick="closeNav()" aria-label="Close menu">&times;</button>
     
@@ -33,8 +33,10 @@
     <section class="home-content">
       <img id="mushroom-image" class="mushroom" src="images/mushroom_small.png" alt="Mushroom (Placeholder)" >
 
-      <button class="start" onclick="window.location.href='exercices.html'">START</button>
-      <button id="reset-mushroom" onclick="resetMushroom()">Add mushroom to garden and plant a new one</button>
+      <div class="home-actions">
+        <button class="start" onclick="window.location.href='exercices.html'">START</button>
+        <button id="reset-mushroom" onclick="resetMushroom()">Add mushroom to garden and plant a new one</button>
+      </div>
 
       <section class="stats" aria-label="Progress">
         <div class="stat">
@@ -42,7 +44,7 @@
           <progress id="streak" value="13" max="25"></progress>
         </div>
         <div class="stat">
-          <label for="xp">XP <img class="button-icons" src="images/xp_icon.png" alt="XP icon image"></label>
+          <label for="xp">XP <img class="button-icons" src="icons/xp.png" alt="XP icon image"></label>
           <progress id="xp" value="7" max="10"></progress>
         </div>
       </section>

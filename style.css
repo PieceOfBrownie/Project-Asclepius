@@ -14,6 +14,12 @@ body {
   background: #f7f8f2;
   color: #24352a;
   font-family: Arial, sans-serif;
+}
+
+.home-page {
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
   padding: 0px;
 }
 
@@ -282,11 +288,19 @@ progress {
 }
 
 .home-content {
+    position: fixed;
+    z-index: 1;
+    top: 76px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    width: min(calc(100% - 40px), 760px);
+    margin: 0 auto;
     display: grid;
     grid-template-columns: minmax(0, 1fr) 170px;
     grid-template-areas:
       "mushroom stats"
-      "start stats";
+      "actions stats";
     align-items: center;
     column-gap: 38px;
     padding: 18px 0 8px;
@@ -296,7 +310,8 @@ progress {
     grid-area: mushroom;
     display: block;
     justify-self: center;
-    width: min(100%, 310px);
+    width: min(100%, 310px, 48svh);
+    max-height: calc(100svh - 210px);
     height: auto;
     object-fit: contain;
     z-index: 1;
@@ -304,7 +319,6 @@ progress {
 }
 
 .start {
-    grid-area: start;
     justify-self: center;
     min-width: 160px;
     padding: 13px 28px;
@@ -319,6 +333,13 @@ progress {
     z-index: 1;
 }
 
+.home-actions {
+    grid-area: actions;
+    display: grid;
+    justify-items: center;
+    gap: 16px;
+}
+
 .start:hover {
     background-color: #1f3025;
 }
@@ -330,13 +351,13 @@ progress {
 
 #bg-image {
     position: fixed;
-    width: 1050px;       /* change this */
-    height: 420px;      /* change this */
-    left: 50%;         /* horizontal position */
-    bottom: 0;         /* vertical position */
+    width: min(1050px, 100vw);
+    height: min(420px, 52svh);
+    left: 50%;
+    bottom: 0;
     transform: translateX(-50%);
-
     z-index: 0;
+    pointer-events: none;
 }
 
 .bg-img {
@@ -425,10 +446,15 @@ progress {
 
 @media (max-width: 520px) {
     .home-content {
+      top: 70px;
+      right: 20px;
+      bottom: 12px;
+      left: 20px;
+      width: auto;
       grid-template-columns: 1fr;
       grid-template-areas:
         "mushroom"
-        "start"
+        "actions"
         "stats";
       row-gap: 24px;
     }
@@ -437,6 +463,10 @@ progress {
       grid-template-columns: 1fr 1fr;
       gap: 14px;
       margin-top: 4px;
+    }
+
+    .mushroom {
+      width: min(100%, 310px, 42svh);
     }
 
     .stat {
