@@ -4,17 +4,23 @@
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <title>Workout</title> <link rel="stylesheet" href="style.css"> 
-    </head> 
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">  
+    </head>
+
     <body> 
         <div id="mySidepanel" class="sidepanel">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="index.html">🏠 Home</a>
-            <a href="health.html">❤️ Health</a>
-            <a href="routine.html">📋 Routine</a>
-            <a href="garden.html">🍄 Garden</a>
-            <a href="friends.html">👥 Friends</a>
-            <a href="ranking.html">🏆 Ranking</a>
-            <a href="exercices.html">💪 Exercises</a>
+            <button type="button" class="closebtn" onclick="closeNav()" aria-label="Close menu">&times;</button>
+            
+            <a href="index.html"><img class="button-icons" src="icons/Home.png" alt="Home icon image">Home</a>
+            <a href="health.html"><img class="button-icons" src="icons/Health.png" alt="Health icon image">Health</a>
+            <a href="routine.html"><img img class="button-icons" src="icons/Routine.png" alt="Routine icon image">Routine</a>
+            <a href="garden.html"><img class="button-icons" src="icons/Garden.png" alt="Garden icon image">Garden</a>
+            <a href="friends.html"><img class="button-icons" src="icons/Friends-Ranking-Profile.png" alt="Friends/Ranking/Profile icon image">Friends</a>
+            <!-- <a href="ranking.html">Ranking</a> -->
+            <a href="exercices.html"><img img class="button-icons" src="icons/Exercises.png" alt="Exercises icon image">Exercises</a>
         </div>
 
         <div id="main">
@@ -132,4 +138,4 @@
         </main> 
         <script src="script.js"></script> 
     </body> 
-    </html>
+</html>
