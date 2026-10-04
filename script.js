@@ -140,6 +140,11 @@ if (finishButton) {
       growthStage++;
 
       localStorage.setItem("mushroomStage", growthStage);
+      saveProfile({
+        xp: Math.min(getProfile().xp + 1, 10),
+        practiceMinutes: getProfile().practiceMinutes + 1,
+        healthImprovement: Math.min(getProfile().healthImprovement + 1, 100)
+      });
 
       window.location.href = "index.html";
   });

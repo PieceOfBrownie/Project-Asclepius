@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShroomFit - Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="mySidepanel" class="sidepanel">
+    <button type="button" class="closebtn" onclick="closeNav()" aria-label="Close menu">&times;</button>
+    <a href="index.html">🏠 Home</a>
+    <a href="profile.html">👤 Profile</a>
+    <a href="health.html">❤️ Health</a>
+    <a href="routine.html">📋 Routine</a>
+    <a href="garden.html">🍄 Garden</a>
+    <a href="friends.html">👥 Friends</a>
+    <a href="exercices.html">💪 Exercises</a>
+  </div>
+
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰</button>
+  </div>
+
+  <header class="topbar">
+    <h1>Profile</h1>
+  </header>
+
+  <main class="profile-page">
+    <section class="profile-header card">
+      <div class="profile-avatar">🍄</div>
+      <div>
+        <h2 id="profile-name">ShroomFit User</h2>
+        <p id="profile-email"></p>
+      </div>
+    </section>
+
+    <form id="profile-form" class="profile-form card">
+      <label for="display-name">Display name</label>
+      <input id="display-name" type="text" maxlength="40" required>
+      <button class="primary" type="submit">Save profile</button>
+      <output id="profile-message" class="form-message"></output>
+    </form>
+
+    <section class="profile-progress">
+      <h2>Your progress</h2>
+      <div class="list">
+        <div class="card"><span>Current streak 🔥</span><strong id="profile-streak"></strong></div>
+        <div class="card"><span>XP ⭐</span><strong id="profile-xp"></strong></div>
+        <div class="card"><span>Practice time</span><strong id="profile-practice"></strong></div>
+        <div class="card"><span>Health improvement</span><strong id="profile-health"></strong></div>
+      </div>
+    </section>
+
+    <button id="logout-button" class="secondary" type="button">Log out</button>
+  </main>
+
+  <script src="auth.js"></script>
+  <script src="script.js"></script>
+  <script>
+    const profile = getProfile();
+    const profileName = document.getElementById("profile-name");
+    const displayName = document.getElementById("display-name");
+
+    function renderProfile() {
+      const currentProfile = getProfile();
+      profileName.textContent = currentProfile.name;
+      document.getElementById("profile-email").textContent = currentProfile.email;
+      displayName.value = currentProfile.name;
+      document.getElementById("profile-streak").textContent = `${currentProfile.streak} days`;
+      document.getElementById("profile-xp").textContent = `${currentProfile.xp} XP`;
+      document.getElementById("profile-practice").textContent = `${currentProfile.practiceMinutes} minutes`;
+      document.getElementById("profile-health").textContent = `+${currentProfile.healthImprovement}%`;
+    }
+
+    document.getElementById("profile-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      saveProfile({ name: displayName.value.trim() });
+      document.getElementById("profile-message").textContent = "Profile saved.";
+      renderProfile();
+    });
+
+    document.getElementById("logout-button").addEventListener("click", signOut);
+    renderProfile();
+  </script>
+</body>
+</html>

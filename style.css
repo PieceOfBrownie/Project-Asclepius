@@ -410,6 +410,101 @@ progress {
     cursor: pointer;
 }
 
+.secondary {
+    padding: 11px 18px;
+    border: 1px solid #773344;
+    border-radius: 8px;
+    background: transparent;
+    color: #773344;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.auth-card {
+    width: min(calc(100% - 40px), 440px);
+    margin: 10vh auto 0;
+    padding: 32px;
+    border: 1px solid #e3b5a4;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgb(119 51 68 / 12%);
+    text-align: center;
+}
+
+.auth-card h1 {
+    margin: 8px 0;
+    font-family: "Passion One", Arial, sans-serif;
+}
+
+.auth-icon,
+.profile-avatar {
+    font-size: 48px;
+}
+
+.auth-form,
+.profile-form {
+    display: grid;
+    gap: 10px;
+    text-align: left;
+}
+
+.auth-form label,
+.profile-form label {
+    color: #49634d;
+    font-weight: 700;
+}
+
+.auth-form input,
+.profile-form input {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #c7cfc9;
+    border-radius: 8px;
+    background: #fff;
+    color: #24352a;
+    font: inherit;
+}
+
+.form-hint,
+.form-message {
+    margin: 2px 0 8px;
+    color: #6d7d70;
+    font-size: 13px;
+}
+
+.form-message {
+    min-height: 16px;
+    color: #326b3c;
+}
+
+.profile-page {
+    display: grid;
+    gap: 20px;
+}
+
+.profile-header {
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.profile-header h2,
+.profile-progress h2 {
+    margin: 0 0 4px;
+}
+
+.profile-header p {
+    margin: 0;
+    color: #6d7d70;
+}
+
+.profile-progress {
+    margin-top: 8px;
+}
+
+.profile-progress .list {
+    margin-top: 12px;
+}
+
 .tabs {
     position: fixed;
     z-index: 1;
