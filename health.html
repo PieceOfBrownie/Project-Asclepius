@@ -42,6 +42,40 @@
     <button class="primary">Update health check-in</button>
   </main>
 
+  <div id="healthForm">
+    <h2>A small quiz to check on your health! :)</h2><br>
+    <form action="">
+      <label for="pseudonym">How do you like to be referred as?</label><br>
+      <input type="text" id=pseudonym" name="pseudonym"><br>
+      
+      <label for="howManyHours">How many hours on average do you sleep?</label><br>
+      <select id="howManyHours" name="hours">
+        <option value="4-6">4-6</option>
+        <option value="6-8">6-8</option>
+        <option value="8-10">8-10</option>
+      </select><br>
+
+      <label for="eatingHabits">Do you usually eat proper meals?</label><br>
+      <input type="radio" id="eatGood" name="eatingHabits">
+      <label for="eatGood">I do.</label>
+      <input type="radio" id="eatBad" name="eatingHabits">
+      <label for="eatBad">I do not.</label><br>
+
+      <label for="restingFrequency">How often do you allow yourself to fully relax?</label><br>
+      <select id="restingFrequency" name="frequency ">
+        <option value="never">Never</option>
+        <option value="everyWeek">Every week</option>
+        <option value="everyDay">Every day</option>
+      </select><br>
+      <input type="submit" value="Finish Quiz">
+    </form>
+
+    <div>
+      <p id="verdict"></p>
+    </div>
+
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>

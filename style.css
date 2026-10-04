@@ -449,3 +449,13 @@ progress {
       font-size: 14px;
     }
 }
+
+#healthForm {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  background-color: #E3B5A4;
+  gap: 100px 0px;
+}

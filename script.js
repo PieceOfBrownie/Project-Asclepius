@@ -140,3 +140,20 @@ finishButton.addEventListener("click", function() {
 
 /* Start everything */ 
 showExercise(); 
+
+// handling healthcare poll
+
+const form  = document.getElementById('healthForm');
+
+form.addEventListener('submit', (event) => {
+    const name = form.getElementById("pseudonym");
+    const hours = form.getElementById("howManyHours");
+    // const meals = 
+    const rest = form.getElementById("restingFrequency");
+
+    if (hours == "4-6")
+      document.getElementById("verdict").innerHTML = "Get more sleep, please!"
+    if (rest == "Never")
+      document.getElementById("verdict").innerHTML = "Get more rest, please!"
+
+});
