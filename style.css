@@ -14,6 +14,12 @@ body {
   background: #f7f8f2;
   color: #24352a;
   font-family: Arial, sans-serif;
+}
+
+.home-page {
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
   padding: 0px;
 }
 
@@ -100,6 +106,13 @@ a {
 .button-icons {
   width: 3vi;
   height: 3vi;
+}
+
+.progress-icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: -0.2em;
+  object-fit: contain;
 }
 
 /* Style the button that is used to open the sidepanel */
@@ -282,21 +295,31 @@ progress {
 }
 
 .home-content {
+    position: fixed;
+    z-index: 1;
+    top: 76px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    width: min(calc(100% - 40px), 760px);
+    margin: 0 auto;
     display: grid;
     grid-template-columns: minmax(0, 1fr) 170px;
     grid-template-areas:
       "mushroom stats"
-      "start stats";
+      "actions stats";
     align-items: center;
     column-gap: 38px;
     padding: 18px 0 8px;
 }
 
 .mushroom {
+    translate: 10px 80px;
     grid-area: mushroom;
     display: block;
     justify-self: center;
-    width: min(100%, 310px);
+    width: min(100%, 310px, 48svh);
+    max-height: calc(100svh - 210px);
     height: auto;
     object-fit: contain;
     z-index: 1;
@@ -304,7 +327,6 @@ progress {
 }
 
 .start {
-    grid-area: start;
     justify-self: center;
     min-width: 160px;
     padding: 13px 28px;
@@ -319,6 +341,13 @@ progress {
     z-index: 1;
 }
 
+.home-actions {
+    grid-area: actions;
+    display: grid;
+    justify-items: center;
+    gap: 16px;
+}
+
 .start:hover {
     background-color: #1f3025;
 }
@@ -330,13 +359,13 @@ progress {
 
 #bg-image {
     position: fixed;
-    width: 1050px;       /* change this */
-    height: 420px;      /* change this */
-    left: 50%;         /* horizontal position */
-    bottom: 0;         /* vertical position */
+    width: min(1050px, 100vw);
+    height: min(420px, 52svh);
+    left: 50%;
+    bottom: 0;
     transform: translateX(-50%);
-
     z-index: 0;
+    pointer-events: none;
 }
 
 .bg-img {
@@ -389,6 +418,101 @@ progress {
     cursor: pointer;
 }
 
+.secondary {
+    padding: 11px 18px;
+    border: 1px solid #773344;
+    border-radius: 8px;
+    background: transparent;
+    color: #773344;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.auth-card {
+    width: min(calc(100% - 40px), 440px);
+    margin: 10vh auto 0;
+    padding: 32px;
+    border: 1px solid #e3b5a4;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgb(119 51 68 / 12%);
+    text-align: center;
+}
+
+.auth-card h1 {
+    margin: 8px 0;
+    font-family: "Passion One", Arial, sans-serif;
+}
+
+.auth-icon,
+.profile-avatar {
+    font-size: 48px;
+}
+
+.auth-form,
+.profile-form {
+    display: grid;
+    gap: 10px;
+    text-align: left;
+}
+
+.auth-form label,
+.profile-form label {
+    color: #49634d;
+    font-weight: 700;
+}
+
+.auth-form input,
+.profile-form input {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #c7cfc9;
+    border-radius: 8px;
+    background: #fff;
+    color: #24352a;
+    font: inherit;
+}
+
+.form-hint,
+.form-message {
+    margin: 2px 0 8px;
+    color: #6d7d70;
+    font-size: 13px;
+}
+
+.form-message {
+    min-height: 16px;
+    color: #326b3c;
+}
+
+.profile-page {
+    display: grid;
+    gap: 20px;
+}
+
+.profile-header {
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.profile-header h2,
+.profile-progress h2 {
+    margin: 0 0 4px;
+}
+
+.profile-header p {
+    margin: 0;
+    color: #6d7d70;
+}
+
+.profile-progress {
+    margin-top: 8px;
+}
+
+.profile-progress .list {
+    margin-top: 12px;
+}
+
 .tabs {
     position: fixed;
     z-index: 1;
@@ -425,10 +549,15 @@ progress {
 
 @media (max-width: 520px) {
     .home-content {
+      top: 70px;
+      right: 20px;
+      bottom: 12px;
+      left: 20px;
+      width: auto;
       grid-template-columns: 1fr;
       grid-template-areas:
         "mushroom"
-        "start"
+        "actions"
         "stats";
       row-gap: 24px;
     }
@@ -437,6 +566,10 @@ progress {
       grid-template-columns: 1fr 1fr;
       gap: 14px;
       margin-top: 4px;
+    }
+
+    .mushroom {
+      width: min(100%, 310px, 42svh);
     }
 
     .stat {

@@ -16,6 +16,7 @@
     <button type="button" class="closebtn" onclick="closeNav()" aria-label="Close menu">&times;</button>
     
     <a href="index.html"><img class="button-icons" src="icons/Home.png" alt="Home icon image">Home</a>
+    <a href="profile.html">👤 Profile</a>
     <a href="health.html"><img class="button-icons" src="icons/Health.png" alt="Health icon image">Health</a>
     <a href="routine.html"><img img class="button-icons" src="icons/Routine.png" alt="Routine icon image">Routine</a>
     <a href="garden.html"><img class="button-icons" src="icons/Garden.png" alt="Garden icon image">Garden</a>
@@ -35,7 +36,7 @@
   <main>
     <p>Track how your health improves as you practice.</p>
     <div class="list">
-      <div class="card"><span>Overall improvement</span><strong>+12%</strong></div>
+      <div class="card"><span>Overall improvement</span><strong id="health-improvement">+12%</strong></div>
       <div class="card"><span>Focus</span><strong>Getting started</strong></div>
       <div class="card"><span>Well-being goal</span><strong>In progress</strong></div>
     </div>
@@ -77,5 +78,9 @@
   </div>
 
   <script src="script.js"></script>
+  <script>
+    document.getElementById("health-improvement").textContent =
+      `+${getProfile().healthImprovement}%`;
+  </script>
 </body>
 </html>
