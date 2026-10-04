@@ -16,7 +16,7 @@
     <button type="button" class="closebtn" onclick="closeNav()" aria-label="Close menu">&times;</button>
     
     <a href="index.html"><img class="button-icons" src="icons/Home.png" alt="Home icon image">Home</a>
-    <a href="profile.html">👤 Profile</a>
+    <a href="profile.html"><img class="button-icons" src="icons/profile.png" alt="Profile icon">Profile</a>
     <a href="health.html"><img class="button-icons" src="icons/Health.png" alt="Health icon image">Health</a>
     <a href="routine.html"><img img class="button-icons" src="icons/Routine.png" alt="Routine icon image">Routine</a>
     <a href="garden.html"><img class="button-icons" src="icons/Garden.png" alt="Garden icon image">Garden</a>
@@ -43,44 +43,76 @@
     <button class="primary">Update health check-in</button>
   </main>
 
-  <div id="healthForm">
-    <h2>A small quiz to check on your health! :)</h2><br>
-    <form action="">
-      <label for="pseudonym">How do you like to be referred as?</label><br>
-      <input type="text" id=pseudonym" name="pseudonym"><br>
-      
-      <label for="howManyHours">How many hours on average do you sleep?</label><br>
-      <select id="howManyHours" name="hours">
-        <option value="4-6">4-6</option>
-        <option value="6-8">6-8</option>
-        <option value="8-10">8-10</option>
-      </select><br>
-
-      <label for="eatingHabits">Do you usually eat proper meals?</label><br>
-      <input type="radio" id="eatGood" name="eatingHabits">
-      <label for="eatGood">I do.</label>
-      <input type="radio" id="eatBad" name="eatingHabits">
-      <label for="eatBad">I do not.</label><br>
-
-      <label for="restingFrequency">How often do you allow yourself to fully relax?</label><br>
-      <select id="restingFrequency" name="frequency ">
-        <option value="never">Never</option>
-        <option value="everyWeek">Every week</option>
-        <option value="everyDay">Every day</option>
-      </select><br>
-      <input type="submit" value="Finish Quiz">
-    </form>
-
-    <div>
-      <p id="verdict"></p>
+  <section class="health-quiz" aria-labelledby="quiz-title">
+    <div class="quiz-heading">
+      <span class="quiz-number">01</span>
+      <div>
+        <h2 id="quiz-title">Quick health check-in</h2>
+        <p>Answer three questions to update your wellness snapshot.</p>
+      </div>
     </div>
 
-  </div>
+    <form id="health-form" class="quiz-form">
+      <label for="pseudonym">What should we call you?</label>
+      <input type="text" id="pseudonym" name="pseudonym" placeholder="Your name" maxlength="40">
 
+      <fieldset>
+        <legend>How many hours do you usually sleep?</legend>
+        <div class="quiz-options">
+          <label><input type="radio" name="hours" value="4-6" required><span>4–6 hours</span></label>
+          <label><input type="radio" name="hours" value="6-8"><span>6–8 hours</span></label>
+          <label><input type="radio" name="hours" value="8-10"><span>8–10 hours</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Do you usually eat proper meals?</legend>
+        <div class="quiz-options quiz-options--two">
+          <label><input type="radio" name="meals" value="yes" required><span>Most days</span></label>
+          <label><input type="radio" name="meals" value="no"><span>Not yet</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>How often do you fully relax?</legend>
+        <div class="quiz-options">
+          <label><input type="radio" name="rest" value="never" required><span>Rarely</span></label>
+          <label><input type="radio" name="rest" value="week"><span>Every week</span></label>
+          <label><input type="radio" name="rest" value="day"><span>Every day</span></label>
+        </div>
+      </fieldset>
+
+      <button class="primary" type="submit">Save check-in</button>
+      <output id="verdict" class="quiz-result"></output>
+    </form>
+  </section>
+
+  <script src="auth.js"></script>
   <script src="script.js"></script>
   <script>
     document.getElementById("health-improvement").textContent =
       `+${getProfile().healthImprovement}%`;
+
+    document.getElementById("health-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      const form = new FormData(event.target);
+      let score = 0;
+
+      if (form.get("hours") !== "4-6") score++;
+      if (form.get("meals") === "yes") score++;
+      if (form.get("rest") !== "never") score++;
+
+      const improvement = Math.min(100, getProfile().healthImprovement + score);
+      saveProfile({
+        name: form.get("pseudonym") || getProfile().name,
+        healthImprovement: improvement
+      });
+      document.getElementById("health-improvement").textContent = `+${improvement}%`;
+      document.getElementById("verdict").textContent =
+        score === 3
+          ? "Great work! Your habits are supporting your well-being."
+          : "Thanks for checking in. Keep building one healthy habit at a time.";
+    });
   </script>
 </body>
 </html>
