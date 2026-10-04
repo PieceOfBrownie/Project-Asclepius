@@ -53,7 +53,10 @@ const startButtons = document.querySelectorAll(".start-button");
 /* Showing exercises (pls) */ 
 
 function showExercise() { 
-   
+  if (!exerciseElements.length) {
+    return;
+  }
+
   exerciseElements.forEach(function(exercise) { 
     exercise.classList.remove("active"); 
   }); 
@@ -121,22 +124,31 @@ startButtons.forEach(function(button) {
     });
 });
 
-restartButton.addEventListener("click", function() {
-    clearInterval(timer);
-    currentExercise = 0;
-    workoutFinished.style.display = "none";
-    showExercise();
-});
+if (restartButton) {
+  restartButton.addEventListener("click", function() {
+      clearInterval(timer);
+      currentExercise = 0;
+      workoutFinished.style.display = "none";
+      showExercise();
+  });
+}
 
-finishButton.addEventListener("click", function() {
-    let growthStage = Number(localStorage.getItem("mushroomStage")) || 1;
+if (finishButton) {
+  finishButton.addEventListener("click", function() {
+      let growthStage = Number(localStorage.getItem("mushroomStage")) || 1;
 
-    growthStage++;
+      growthStage++;
 
-    localStorage.setItem("mushroomStage", growthStage);
+      localStorage.setItem("mushroomStage", growthStage);
+      saveProfile({
+        xp: Math.min(getProfile().xp + 1, 10),
+        practiceMinutes: getProfile().practiceMinutes + 1,
+        healthImprovement: Math.min(getProfile().healthImprovement + 1, 100)
+      });
 
-    window.location.href = "index.html";
-});
+      window.location.href = "index.html";
+  });
+}
 
 /* Start everything */ 
 showExercise(); 
