@@ -60,9 +60,14 @@ a {
   font-family: "Passion One", Times, serif;
   font-size: 18px;
   
-  display: block;
+  /* flexing ;3 */
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  flex-direction: column;
 
-  padding: 8px 8px 8px 32px;
+  padding: 0.5vi 0.5vi; 
+  /* if vi won't work out, I'll just use px's */
   color: #0B0014;
 
   text-decoration: none;
@@ -93,8 +98,8 @@ a {
 }
 
 .button-icons {
-  width: 25%;
-  height: 25%;
+  width: 3vi;
+  height: 3vi;
 }
 
 /* Style the button that is used to open the sidepanel */
