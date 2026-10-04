@@ -108,6 +108,13 @@ a {
   height: 3vi;
 }
 
+.progress-icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: -0.2em;
+  object-fit: contain;
+}
+
 /* Style the button that is used to open the sidepanel */
 #main {
     padding: 16px 20px 0;
