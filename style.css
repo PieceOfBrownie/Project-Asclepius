@@ -330,8 +330,8 @@ progress {
 
 #bg-image {
     position: fixed;
-    width: 1000px;       /* change this */
-    height: 400px;      /* change this */
+    width: 1050px;       /* change this */
+    height: 420px;      /* change this */
     left: 50%;         /* horizontal position */
     bottom: 0;         /* vertical position */
     transform: translateX(-50%);
