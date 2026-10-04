@@ -226,6 +226,7 @@ h1 {
     border-radius: 8px;
     cursor: pointer;
     box-shadow: 0 4px 0 #828e85;
+    z-index: 1;
 }
 
 .topbar,
@@ -292,6 +293,7 @@ progress {
     width: min(100%, 310px);
     height: auto;
     object-fit: contain;
+    z-index: 1;
 }
 
 .start {
@@ -307,6 +309,7 @@ progress {
     font-weight: 700;
     cursor: pointer;
     box-shadow: 0 4px 0 #828e85;
+    z-index: 1;
 }
 
 .start:hover {
