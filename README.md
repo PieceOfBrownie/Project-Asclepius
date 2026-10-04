@@ -7,8 +7,8 @@ The Web Page (and the mobile app[in progress]) will help you keep consistent wit
 
 "ShroomFit" will have you accompanied with in-game mushrooms! You will grow more mushrooms as you complete more workouts, go to app's recommended gyms that are fit best for your situation and keep your streak on fire. You can also purchase additional "skins" for your adorable companions, bringing them a refreshing appeal.
 
-### Authors
+<!-- ### Authors
 Oleksandr Kupchyk,\
 Vadym Horshchuk,\
 Maria Siamenchyk,\
-Chuqi Jiang.\
+Chuqi Jiang. -->
