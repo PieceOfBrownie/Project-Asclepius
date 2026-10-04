@@ -24,9 +24,6 @@
     <a href="exercices.html"><img img class="button-icons" src="icons/Exercises.png" alt="Exercises icon image">Exercises</a>
   </div>
   
-  <div id="bg-image">
-    <img class="bg-image" src="icons/ground.png" alt="background for mushroom">
-  </div>
 
   <div id="main">
     <button class="openbtn" onclick="openNav()">☰</button>
@@ -35,7 +32,10 @@
   <main class="home">
     <section class="home-content">
       <img id="mushroom-image" class="mushroom" src="images/mushroom_small.png" alt="Mushroom (Placeholder)" >
+
       <button class="start" onclick="window.location.href='exercices.html'">START</button>
+      <button id="reset-mushroom" onclick="resetMushroom()">Add mushroom to garden and plant a new one</button>
+
       <section class="stats" aria-label="Progress">
         <div class="stat">
           <label for="streak">Streak 🔥</label>
@@ -46,13 +46,17 @@
           <progress id="xp" value="7" max="10"></progress>
         </div>
       </section>
+      
     </section>
   </main>
 
-  
+  <div id="bg-image">
+    <img class="bg-img" src="images/ground.png" alt="background for mushroom">
+  </div>
+
   <script src="script.js"></script>
 
-  <button id="reset-mushroom" onclick="resetMushroom()">Add mushroom to garden and plant a new one</button>
+  
   <script>
   function resetMushroom() {
     localStorage.removeItem("mushroomStage");
